@@ -111,11 +111,11 @@ trusting_period = '10days'
 trust_threshold = { numerator = '1', denominator = '3' }
 address_type = { derivation = 'cosmos' }
 ignore_port_channel = []
-# [chains.packet_filter]
-# policy = 'allow'
-# list = [
-#    ['wasm.*', '*'],
-# ]
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['wasm.<YOUR_WASM_CONTRACT_ADDRESS>', '*'],
+]
 
 [[chains]]
 id = 'band-laozi-testnet6'
@@ -138,8 +138,8 @@ trusting_period = '14days'
 trust_threshold = { numerator = '1', denominator = '3' }
 address_type = { derivation = 'cosmos' }
 ignore_port_channel = []
-# [chains.packet_filter]
-# policy = 'allow'
-# list = [
-#    ['oracle', '*'],
-# ]
+[chains.packet_filter]
+policy = 'allow'
+list = [
+   ['oracle', '*'],
+]
